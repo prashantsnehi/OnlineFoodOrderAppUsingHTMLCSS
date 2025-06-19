@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🍔 Food Order App</h1>
+    <select onchange="filterCategory(this.value)">
+      <option value="All">All</option>
+      <option value="Pizza">Pizza</option>
+      <option value="Snacks">Snacks</option>
+      <option value="Burger">Burger</option>
+    </select>
+  </header>
+
+  <main>
+    <div id="food-list"></div>
+    <aside class="cart">
+      <h3>🛒 Cart</h3>
+      <ul id="cart-items"></ul>
+      <p>Total: ₹<span id="total">0</span></p>
+      <button onclick="makePayment()">Pay Now</button>
+    </aside>
+  </main>
+
+  <script src="foodData.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

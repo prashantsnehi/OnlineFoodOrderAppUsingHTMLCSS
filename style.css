@@ -1,0 +1,23 @@
+body { font-family: sans-serif; margin: 0; }
+header { background: #f34; color: white; padding: 1rem; text-align: center; }
+select { margin-top: 1rem; }
+
+main { display: flex; padding: 1rem; gap: 2rem; }
+
+#food-list { flex: 3; display: flex; flex-wrap: wrap; gap: 1rem; }
+.card { border: 1px solid #ccc; padding: 1rem; width: 150px; background: white; }
+
+.cart { flex: 1; border: 1px solid #ccc; padding: 1rem; background: #f8f8f8; }
+
+.auth-container {
+  max-width: 300px; margin: 5rem auto; text-align: center;
+}
+.auth-container input, button {
+  display: block; width: 100%; margin: 0.5rem 0; padding: 0.5rem;
+}
+
+img {
+  width: 150px; 
+  height: 150px; 
+  border-radius: 8px;
+}

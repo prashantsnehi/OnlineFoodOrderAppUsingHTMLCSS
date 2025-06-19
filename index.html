@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Food App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="auth-container">
+    <h2>🍕 Food Order - Login/Register</h2>
+    <input type="text" id="username" placeholder="Enter your name" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <button onclick="register()">Register</button>
+    <button onclick="login()">Login</button>
+  </div>
+
+  <script>
+    function register() {
+      localStorage.setItem("user", document.getElementById("username").value);
+      localStorage.setItem("pass", document.getElementById("password").value);
+      alert("Registered! Please login.");
+    }
+
+    function login() {
+      const u = document.getElementById("username").value;
+      const p = document.getElementById("password").value;
+      if (u === localStorage.getItem("user") && p === localStorage.getItem("pass")) {
+        location.href = "home.html";
+      } else {
+        alert("Wrong credentials");
+      }
+    }
+  </script>
+</body>
+</html>
